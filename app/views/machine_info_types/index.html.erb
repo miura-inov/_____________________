@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Machine Info Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @machine_info_types.each do |machine_info_type| %>
+      <tr>
+        <td><%= machine_info_type.name %></td>
+        <td><%= link_to 'Show', machine_info_type %></td>
+        <td><%= link_to 'Edit', edit_machine_info_type_path(machine_info_type) %></td>
+        <td><%= link_to 'Destroy', machine_info_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Machine info type', new_machine_info_type_path %>

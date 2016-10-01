@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Machine Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @machine_results.each do |machine_result| %>
+      <tr>
+        <td><%= machine_result.name %></td>
+        <td><%= link_to 'Show', machine_result %></td>
+        <td><%= link_to 'Edit', edit_machine_result_path(machine_result) %></td>
+        <td><%= link_to 'Destroy', machine_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Machine result', new_machine_result_path %>

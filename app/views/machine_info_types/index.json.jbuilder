@@ -1,0 +1,1 @@
+json.array! @machine_info_types, partial: 'machine_info_types/machine_info_type', as: :machine_info_type

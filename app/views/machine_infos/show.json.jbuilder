@@ -1,0 +1,1 @@
+json.partial! "machine_infos/machine_info", machine_info: @machine_info
